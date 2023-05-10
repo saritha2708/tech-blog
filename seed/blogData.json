@@ -1,0 +1,17 @@
+[
+    {
+      "title": "ChatGPT",
+      "description": "ChatGPT is a natural language processing tool driven by AI technology that allows you to have human-like conversations and much more with the chatbot. The language model can answer questions and assist you with tasks, such as composing emails, essays, and code." ,
+      "user_id": 1
+    },
+    {
+      "title": "Bootstrap",
+      "description": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
+      "user_id": 2
+    },
+    {
+      "title": "Node.js",
+      "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+      "user_id": 3
+    }
+]
