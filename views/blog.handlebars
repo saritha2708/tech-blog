@@ -1,0 +1,23 @@
+<div class="container my-5 py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-light p-4">
+          <h2>Edit Blog Post</h2>
+          <form id="blogForm" data-id="{{id}}">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title" value="{{title}}">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" name="description" rows="5">{{description}}</textarea>
+            </div>
+            <button type="button" id="updateBtn" class="btn btn-primary">Update</button>
+            <button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script src="/js/blog.js"></script>

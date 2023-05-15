@@ -1,0 +1,35 @@
+<div class="container my-3 py-1">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="bg-white p-4">
+          <h1 class="text-center text-primary">My Blogs</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#each blogs as |blog| }}
+  <div class="container my-3 py-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="bg-light p-4">
+            <h2><a href="/blog/{{blog.id}}">{{blog.title}}</a></h2>
+            <p>{{blog.description}}</p>
+          </div>
+        </div>
+     </div>
+  </div>
+{{/each}}
+
+<div class="container my-3 py-1">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="bg-white p-4">
+          <h1 class="text-center text-primary"><a href="/newPost">New Post</a></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
