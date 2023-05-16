@@ -35,8 +35,8 @@
 
   ## Project URL
 
-  URL link to the note-taker webpage:
-  (https://saritha-note-taker.herokuapp.com/).
+  URL link to the tech-blog webpage:
+  (https://saritha-tech-blog.herokuapp.com/).
 
 
   ## Project Image
