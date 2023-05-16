@@ -1,5 +1,6 @@
 const { User } = require('../models');
 
+// Creates new user and logs them in
 const createUser = async (req, res) => {
     try {
         const userData = await User.create(req.body);
@@ -19,6 +20,7 @@ const createUser = async (req, res) => {
       }
 };
 
+// Logs in existing user
 const loginUser = async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
@@ -51,6 +53,7 @@ const loginUser = async (req, res) => {
       }
 };
 
+// Logs out user
 const logoutUser = async (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {

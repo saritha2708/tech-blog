@@ -1,5 +1,6 @@
-const { User, Blog, Comment} = require('../models');
+const { Blog} = require('../models');
 
+// Creates new blog
 const createBlog = async (req, res) => {
     try {
         const newBlog = await Blog.create({
@@ -13,6 +14,7 @@ const createBlog = async (req, res) => {
     }
 };
 
+// Updates blog
 const updateBlog = async (req, res) => {
     try {
         const updateBlog = await Blog.update({
@@ -30,6 +32,7 @@ const updateBlog = async (req, res) => {
     }
 };
 
+// Deletes blog
 const deleteBlog = async (req, res) => {
     try {
         const deleteBlog = await Blog.destroy({

@@ -1,5 +1,6 @@
 const { User, Blog, Comment } = require('../models');
 
+// Renders homepage with all blogs
 const renderHomepage = async (req, res) => {
     try {
         const blogData = await Blog.findAll({
@@ -31,6 +32,7 @@ const renderHomepage = async (req, res) => {
     }
 };
 
+// Renders dashboard with user's blogs
 const renderDashboard = async (req, res) => {
     try {
         // Find the logged in user based on the session ID
@@ -50,6 +52,7 @@ const renderDashboard = async (req, res) => {
       }
 };
 
+// Renders login page
 const renderLogin = async (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
@@ -60,6 +63,7 @@ const renderLogin = async (req, res) => {
       res.render('login');
 };
 
+// Renders signup page
 const renderSignup = async (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
@@ -70,6 +74,7 @@ const renderSignup = async (req, res) => {
       res.render('signup');
 };
 
+// Renders blog so user can update it or delete it
 const renderBlog = async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
@@ -100,6 +105,7 @@ const renderBlog = async (req, res) => {
     }
 };
 
+// Renders new post page so user can create a new blog
 const renderNewPost = async (req, res) => {
     try {
         res.render('newPost', {

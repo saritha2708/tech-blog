@@ -1,5 +1,6 @@
-const { User, Blog, Comment} = require('../models');
+const { Comment } = require('../models');
 
+// Creates new comment on blog post 
 const createComment = async (req, res) => {
     try {
         const newBlog = await Comment.create({

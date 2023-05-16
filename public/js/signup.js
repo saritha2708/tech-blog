@@ -1,3 +1,4 @@
+// Calls the api to create a new user
 const signupFormHandler = async (event) => {
     event.preventDefault();
   

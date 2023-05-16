@@ -1,9 +1,9 @@
-// const $commentForm = document.querySelector('#comment-form');
 const $parentDiv = document.querySelector('#parent');
 
+// Calls the api to create a new comment on a blog post
 const createComment = async (event) => {
     event.preventDefault();
-    let e = event.target;
+    let e = event.target; // targets the blog intended to be commented on
     if (e.matches('.commentBtn')) {
         const blog_id = e.getAttribute('data-id');
         const $commentText = document.querySelector(`#comment-text${blog_id}`);
@@ -33,4 +33,5 @@ const createComment = async (event) => {
     }
 };
 
+// Event listener for the entire div which contains all the blogs
 $parentDiv.addEventListener('click', createComment);

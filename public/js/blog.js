@@ -6,18 +6,13 @@ const $deleteBtn = document.getElementById('deleteBtn');
 const $blogForm = document.getElementById('blogForm');
 const $newPost = document.getElementById('newPost');
 
+// calls api to update the blog post 
 const updateBlog = async (event) => {
     event.preventDefault();
-
-    console.log('updateBlog() called');
 
     const title = $title.value.trim();
     const description = $description.value.trim();
     const id = $blogForm.dataset.id;
-
-    console.log('title: ', title);
-    console.log('description: ', description);
-    console.log('id: ', id);
 
     if(!title || !description){
         return alert('Please provide title and description');
@@ -40,6 +35,7 @@ const updateBlog = async (event) => {
     }
 };
 
+// calls api to Delete the blog post
 const deleteBlog = async (event) => {
     event.preventDefault();
 

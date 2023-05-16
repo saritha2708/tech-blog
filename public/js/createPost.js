@@ -2,7 +2,7 @@ const $title = document.querySelector('#title');
 const $description = document.querySelector('#description');
 const $createBtn = document.querySelector('#createBtn');
 
-
+// Calls the api to create a new blog post
 const createBlog = async (event) => {
     event.preventDefault();
 
