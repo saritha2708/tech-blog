@@ -1,6 +1,6 @@
 
   [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  # Note Taker
+  # Tech Blog
 
 
   ## Description
@@ -50,6 +50,9 @@
   Built this application based on the knowledge gained from bootcamp activities.
 
   Used Bootstrap and MDBootstrap for frontend.
+
+  Also took help from ChatGPT while buliding the frontend. 
+
 
   ## License
 
