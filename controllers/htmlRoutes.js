@@ -11,13 +11,15 @@ const renderHomepage = async (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'description', 'blog_id', 'user_id'],
+                    attributes: ['id', 'description', 'blog_id', 'user_id', 'created_at'],
                     include: {
                         model: User,
                         attributes: ['name'],
                     },
+                    order: [['created_at', 'DESC']],
                 }
             ],
+            order: [['created_at', 'DESC']],
         });
 
         const blogs = blogData.map((blog) => blog.get({ plain: true }));
@@ -38,7 +40,10 @@ const renderDashboard = async (req, res) => {
         // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id, {
           attributes: { exclude: ['password'] },
-          include: [{ model: Blog }],
+          include: [{ 
+            model: Blog,
+            order: [['created_at', 'DESC']], 
+        }],
         });
     
         const user = userData.get({ plain: true });

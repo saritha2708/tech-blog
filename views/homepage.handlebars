@@ -30,7 +30,7 @@
           <div class="collapse mt-3" id="view-comment-list{{blog.id}}">
             {{#each blog.comments as |comment|}}
             <div>
-              <p><b>@{{comment.user.name}}</b><br>{{comment.description}}</p>
+              <p><b>@{{comment.user.name}} on {{format_date comment.created_at}}</b><br>{{comment.description}}</p>
             </div>
             {{/each}}
           </div>
